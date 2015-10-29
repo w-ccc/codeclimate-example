@@ -17,6 +17,7 @@ for(var i = 0; i < chess_row_number; i++) {
 //创建游戏界面
 function createMap()
 {
+    /*global document:true*/
 	if(setSettings())
 	{
 		var chess_grid_width;
@@ -209,7 +210,7 @@ function refreshChessMap()
 	{
 		chess_grid_old_status[i] = chess_grid_status[i];
 	}
-	for(var i = 0; i < chess_row_number * chess_row_number; i++)
+	for(i = 0; i < chess_row_number * chess_row_number; i++)
 	{
 		checkChessGridStatus(i);
 	}
