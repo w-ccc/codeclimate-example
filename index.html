@@ -1,0 +1,31 @@
+<!DOCTYPE HTML>
+<html id= "scroll ">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<script src="js/GameOfLife.js" type="text/javascript"></script>
+		<link rel="stylesheet" type="text/css" href="css/GameOfLife.css" />
+	</head>
+	<body style = "margin:0px;padding:0px;background-color:#666">
+		<div id = "settings">
+			<div id = "set_row_number">请设置方格的边长(0~500):
+				<input id ="row_number_input" value = "50"/>
+			</div>
+			<div id = "set_refresh_time">请设置更新的时间(s):
+				<input id ="refresh_time_input" value = "0.1"/>
+			</div>
+			<div id = "set_ratio">请设置初始活细胞比例(0~1):
+				<input id = "ratio_input" value = "0.2"/>
+			</div>
+			<div id = "set_style">请设置配色风格：
+				<div id = "style0" class = "style_div" style="left:195px;top:0px;background-color:black;color:#ccc;border:5px solid blue" onclick = "setStyle(0);">经典配色</div>
+				<div id = "style1" class = "style_div" style="left:40px;top:50px;background-color:#FEE3E3;color:#D65858;" onclick = "setStyle(1);">活力四射</div>
+				<div id = "style2" class = "style_div" style="left:195px;top:50px;background-color:#FEFEE3;color:#D6D658;" onclick = "setStyle(2);">平淡优雅</div>
+				<div id = "style3" class = "style_div" style="left:40px;top:100px;background-color:#E3FEE3;color:#58D658;" onclick = "setStyle(3);">生机勃勃</div>
+				<div id = "style4" class = "style_div" style="left:195px;top:100px;background-color:#E3FEFE;color:#58D6D6;" onclick = "setStyle(4);">时尚活泼</div>
+				<div id = "style5" class = "style_div" style="left:40px;top:150px;background-color:#E3E3FE;color:#5858D6;" onclick = "setStyle(5);">沉稳冷静</div>
+				<div id = "style6" class = "style_div" style="left:195px;top:150px;background-color:#FEE3FE;color:#D658D6;" onclick = "setStyle(6);">高端大气</div>
+			</div>   
+			<button id = "enter" onclick = "start()">确认</button>
+		</div>
+	</body>
+</html>

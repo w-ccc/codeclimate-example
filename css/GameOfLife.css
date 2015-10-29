@@ -1,0 +1,100 @@
+#settings
+{
+	position:absolute;
+	background-color:#ccc;
+	left:50%;
+	top:50%;
+	margin-left:-200px;
+	margin-top:-250px;
+	width:400px;
+	height:500px;
+	z-index:1;
+	padding:0px;
+}
+#set_row_number
+{
+	position:absolute;
+	left:50px;
+	top:50px;
+	font-size:15px;
+	margin:0px;
+	padding:0px;
+}
+#set_refresh_time
+{
+	position:absolute;
+	left:50px;
+	top:100px;
+	font-size:15px;
+	margin:0px;
+	padding:0px;
+}
+#set_ratio
+{
+	position:absolute;
+	left:50px;
+	top:150px;
+	font-size:15px;
+	margin:0px;
+	padding:0px;
+}
+#set_style
+{
+	position:absolute;
+	left:50px;
+	top:200px;
+	font-size:15px;
+	margin:0px;
+	padding:0px;
+}
+#row_number_input
+{
+	position:absolute;
+	left:200px;
+	width:50px;
+	top:0px;
+	height:15px;
+	margin:0px;
+	padding:0px;
+	font-size:15px;
+}
+#refresh_time_input
+{
+	position:absolute;
+	left:200px;
+	width:50px;
+	top:0px;
+	height:15px;
+	margin:0px;
+	padding:0px;
+	font-size:15px;
+}
+#ratio_input
+{
+	position:absolute;
+	left:200px;
+	width:50px;
+	top:0px;
+	height:15px;
+	margin:0px;
+	padding:0px;
+	font-size:15px;
+}
+#enter
+{
+	position:absolute;
+	left:90px;
+	width:230px;
+	top:400px;
+	font-size:15px;
+	margin:0px;
+	padding:0px;
+}
+
+.style_div
+{
+	position:absolute;
+	cursor:pointer;
+	width:75px;
+	text-align:center;
+}
