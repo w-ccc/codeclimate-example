@@ -8,6 +8,8 @@ var wall_color = "#666"
 var refresh_time = 100;
 var ratio = 0.2;
 
+/*eslint no-unused-vars: [2, {"args": "after-used", "argsIgnorePattern": "^_"}]*/
+
 for(var i = 0; i < chess_row_number; i++) {
     chess_grid[i] = null;
     chess_grid_status[i] = 0;
@@ -17,7 +19,7 @@ for(var i = 0; i < chess_row_number; i++) {
 //创建游戏界面
 function createMap()
 {
-    /*global document:true*/
+    /*global document setInterval:true*/
 	if(setSettings())
 	{
 		var chess_grid_width;
@@ -333,4 +335,8 @@ function checkSettings()
 		return false;
 	}
 	return true;
+}
+
+function start(){
+    createMap();
 }
