@@ -7,9 +7,6 @@ var dead_color = "black";
 var wall_color = "#666"
 var refresh_time = 100;
 var ratio = 0.2;
-var info_div;
-var p_row;
-var b_strat;
 
 for(var i = 0; i < chess_row_number; i++) {
     chess_grid[i] = null;
@@ -59,7 +56,7 @@ function createMap()
 		}
 		setInterval("refreshChessMap()", refresh_time);
 	}
-	info_div = document.createElement("div");
+	var info_div = document.createElement("div");
     info_div.style.width = chess_grid_width * chess_row_number * 0.75+ 'px';
     info_div.style.height = chess_grid_width * chess_row_number - 50 + 'px';
     info_div.style.position = "absolute";
@@ -70,9 +67,9 @@ function createMap()
     info_div.style.textAlign = 'center';
     info_div.style.paddingTop = "50px";
     document.body.appendChild(info_div);
-    p_row = document.createElement("p");
-    p_ratio = document.createElement("p");
-    p_time = document.createElement("p");
+    var p_row = document.createElement("p");
+    var p_ratio = document.createElement("p");
+    var p_time = document.createElement("p");
     p_row.style.lineHeight = p_ratio.style.lineHeight = p_time.style.lineHeight = "50px";
     p_row.style.fontSize = p_ratio.style.fontSize = p_time.style.fontSize = "25px";
     p_row.style.fontFamily = p_ratio.style.fontFamily = p_time.style.fontFamily = "FZShuTi";
@@ -82,7 +79,7 @@ function createMap()
     info_div.appendChild(p_row);
     info_div.appendChild(p_ratio);
     info_div.appendChild(p_time);
-    b_start = document.createElement("button");
+    var b_start = document.createElement("button");
     b_start.onclick = function(){var settings = document.getElementById("settings");document.body.innerHTML = "";settings.style.display = "block";document.body.appendChild(settings);};
     b_start.style.position = "absolute";
     b_start.style.left = "50%";
