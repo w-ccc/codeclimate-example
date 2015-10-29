@@ -7,6 +7,9 @@ var dead_color = "black";
 var wall_color = "#666"
 var refresh_time = 100;
 var ratio = 0.2;
+var info_div;
+var p_row;
+var b_strat;
 
 for(var i = 0; i < chess_row_number; i++) {
     chess_grid[i] = null;
@@ -80,7 +83,7 @@ function createMap()
     info_div.appendChild(p_ratio);
     info_div.appendChild(p_time);
     b_start = document.createElement("button");
-    b_start.onclick = function(){settings = document.getElementById("settings");document.body.innerHTML = "";settings.style.display = "block";document.body.appendChild(settings);};
+    b_start.onclick = function(){var settings = document.getElementById("settings");document.body.innerHTML = "";settings.style.display = "block";document.body.appendChild(settings);};
     b_start.style.position = "absolute";
     b_start.style.left = "50%";
     b_start.style.marginLeft = "-50px";
@@ -250,6 +253,7 @@ function setSettings()
 
 function checkNumber(obj)
 {
+    /*global alert:true*/
 	//var re = /^-?[1-9]*(.d*)?$|^-?0(.d*)?$/;
 	var re = /^\d+(\.\d+)?$/;
 	if(!re.test(obj.value))
@@ -264,6 +268,7 @@ function checkNumber(obj)
 
 function checkPositiveNumber(obj)
 {
+    /*global alert:true*/
 	var re = /^[0-9]*[1-9][0-9]*$/;
 	if(!re.test(obj.value))
 	{
@@ -277,6 +282,7 @@ function checkPositiveNumber(obj)
 
 function checkEmpty(obj)
 {
+    /*global alert:true*/
 	if(obj.value =="")
 	{
 		alert("输入不能为空。");
@@ -290,6 +296,7 @@ function checkEmpty(obj)
 
 function checkSettings()
 {
+    /*global alert:true*/
 	if(!checkPositiveNumber(document.getElementById("row_number_input")))
 	{
 		return false;
@@ -330,9 +337,3 @@ function checkSettings()
 	}
 	return true;
 }
-
-
-function start()
-{
-	createMap();
-} 
